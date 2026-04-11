@@ -1,0 +1,5 @@
+{
+  "name": "NIBBLER Arcade Web Experience",
+  "description": "A single-page web experience combining the history of the 1982 arcade classic Nibbler with a playable HTML5 Canvas implementation.",
+  "requestFramePermissions": []
+}

@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-press-start: "Press Start 2P", system-ui;
+  --font-vt323: "VT323", monospace;
+  
+  --color-arcade-black: #000000;
+  --color-arcade-red: #ff2020;
+  --color-arcade-red-dark: #cc0000;
+  --color-arcade-yellow: #ffdd00;
+  --color-arcade-blue: #2299ff;
+  --color-arcade-border: #1a4fff;
+  --color-arcade-wall: #0033cc;
+  --color-arcade-white: #e8e8e8;
+}
+
+@layer base {
+  body {
+    @apply bg-arcade-black text-arcade-white font-vt323 text-[18px] overflow-hidden;
+  }
+  
+  h1, h2, h3 {
+    @apply font-press-start text-arcade-yellow uppercase;
+  }
+}
+
+/* CRT Scanlines Overlay */
+.scanlines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    rgba(18, 16, 16, 0) 50%,
+    rgba(0, 0, 0, 0.25) 50%
+  );
+  background-size: 100% 4px;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.scanlines::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    transparent 0%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  pointer-events: none;
+}
+
+/* Custom Scrollbar for Editorial Panel */
+.editorial-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.editorial-scroll::-webkit-scrollbar-track {
+  background: #000;
+}
+
+.editorial-scroll::-webkit-scrollbar-thumb {
+  background: #1a4fff;
+  border-radius: 4px;
+}
+
+.editorial-scroll::-webkit-scrollbar-thumb:hover {
+  background: #2299ff;
+}
