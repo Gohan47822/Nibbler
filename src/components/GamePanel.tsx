@@ -5,7 +5,7 @@ type Point = { x: number; y: number };
 type GameState = 'idle' | 'playing' | 'over';
 
 const GRID_SIZE = 20;
-const CELL_SIZE = 16;
+const CELL_SIZE = 24;
 const CANVAS_SIZE = GRID_SIZE * CELL_SIZE;
 
 export default function GamePanel() {
@@ -362,9 +362,9 @@ export default function GamePanel() {
   }, [gameState, score]);
 
   return (
-    <div className="h-full flex flex-col items-center justify-center bg-black p-4 relative overflow-hidden">
+    <div className="flex flex-col items-center bg-black p-8 relative">
       {/* HUD */}
-      <div className="w-full max-w-[320px] flex justify-between items-center mb-6 font-press-start text-[10px] text-arcade-yellow">
+      <div className="w-full max-w-[480px] flex justify-between items-center mb-6 font-press-start text-[10px] text-arcade-yellow">
         <div>
           <p className="mb-1 opacity-60">PUNTEGGIO</p>
           <p className="text-lg">{score.toString().padStart(7, '0')}</p>

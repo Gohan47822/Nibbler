@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function EditorialPanel() {
   return (
-    <div className="h-full overflow-y-auto editorial-scroll p-8 bg-black">
+    <div className="p-8 bg-black">
       <header className="mb-12">
         <h1 className="text-4xl mb-2 tracking-tighter">NIBBLER</h1>
         <p className="text-arcade-yellow opacity-80 text-xl">Arcade Web Experience</p>
@@ -18,6 +18,12 @@ export default function EditorialPanel() {
         </p>
       </section>
 
+        <img
+          src="/Cabinato.webp"
+          alt="Cabinato originale Nibbler Rock-Ola 1982"
+          className="w-full rounded-lg border-2 border-arcade-blue shadow-[0_0_20px_rgba(26,79,255,0.4)] mb-10"
+        />
+
       <section className="mb-10">
         <h2 className="text-xl mb-4">02. MECCANICA DI GIOCO</h2>
         <p className="text-arcade-white leading-relaxed">
@@ -27,6 +33,12 @@ export default function EditorialPanel() {
           La velocità aumenta costantemente, mettendo alla prova i riflessi più pronti.
         </p>
       </section>
+
+        <img
+          src="/Screenshot.png"
+          alt="Screenshot gameplay Nibbler"
+          className="w-full rounded-lg border-2 border-arcade-blue shadow-[0_0_20px_rgba(26,79,255,0.4)] mb-10"
+        />
 
       <section className="mb-10">
         <h2 className="text-xl mb-4">03. VARIANTI E CLONI</h2>

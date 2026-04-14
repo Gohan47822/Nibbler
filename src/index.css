@@ -17,7 +17,7 @@
 
 @layer base {
   body {
-    @apply bg-arcade-black text-arcade-white font-vt323 text-[18px] overflow-hidden;
+    @apply bg-arcade-black text-arcade-white font-vt323 text-[18px] overflow-y-auto;
   }
   
   h1, h2, h3 {
